@@ -611,19 +611,22 @@
   const audioFile = audioUrls[currentLanguage]?.[section];
 
   if (!audioFile) {
-    console.log('Audio not found:', section, currentLanguage);
+    console.log("Audio not found:", section, currentLanguage);
     return;
   }
 
-  const audioPath = window.location.origin + "/Moon/" + audioFile;
-
   if (currentAudio) {
     currentAudio.pause();
-    currentAudio.currentTime = 0;
+    currentAudio = null;
   }
 
-  currentAudio = new Audio(audioPath);
-  currentAudio.play().catch(err => console.log(err));
+  const audio = new Audio(audioFile);
+
+  audio.play().catch(err => {
+    console.log("Audio blocked or failed:", err);
+  });
+
+  currentAudio = audio;
 }
     // ===========================
     // TRANSLATION SYSTEM
