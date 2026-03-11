@@ -608,21 +608,23 @@
     };
 
     function playAudio(section) {
-      const audioPath = audioUrls[currentLanguage]?.[section];
+  const audioFile = audioUrls[currentLanguage]?.[section];
 
-      if (!audioPath) {
-        console.log('Audio not found:', section, currentLanguage);
-        return;
-      }
+  if (!audioFile) {
+    console.log('Audio not found:', section, currentLanguage);
+    return;
+  }
 
-      if (currentAudio) {
-        currentAudio.pause();
-        currentAudio.currentTime = 0;
-      }
+  const audioPath = '/Moon/' + audioFile;
 
-      currentAudio = new Audio(audioPath);
-      currentAudio.play().catch(() => {});
-    }
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  currentAudio = new Audio(audioPath);
+  currentAudio.play().catch(() => {});
+}
 
     // ===========================
     // TRANSLATION SYSTEM
