@@ -607,7 +607,8 @@
       }
     };
 
- function playAudio(section) {
+function playAudio(section) {
+
   const audioFile = audioUrls[currentLanguage]?.[section];
 
   if (!audioFile) {
@@ -621,12 +622,14 @@
     currentAudio.currentTime = 0;
   }
 
-  // create and play new audio
+  // create new audio
   currentAudio = new Audio("./" + audioFile);
 
+  // play it
   currentAudio.play().catch(err => {
     console.log("Audio blocked:", err);
   });
+
 }
     // ===========================
     // TRANSLATION SYSTEM
