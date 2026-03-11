@@ -709,22 +709,26 @@ let audioPlayer = new Audio();
     
    // Toggle answer visibility with audio control
 function toggleAnswer(card) {
+
   const answerBox = card.querySelector('.answer-box');
 
-  if (answerBox) {
+  if (!answerBox) return;
 
-    const isOpening = !answerBox.classList.contains('open');
+  const isOpening = !answerBox.classList.contains('open');
 
-    answerBox.classList.toggle('open');
+  answerBox.classList.toggle('open');
 
-    if (isOpening) {
+  // stop any audio
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
 
-      // Stop any audio when opening a question
-      audioPlayer.pause();
-      audioPlayer.currentTime = 0;
-
+  if (isOpening) {
+    const section = card.getAttribute("data-audio");
+    if (section) {
+      playAudio(section);
     }
   }
+
 }
           
           // Get the question ID from the card's position or data attribute
@@ -763,7 +767,7 @@ function toggleAnswer(card) {
           if (audioId) {
             playAudio(audioId);
           }
-        } else {
+         else {
           // Stop audio when closing
           if (currentAudio) {
             currentAudio.pause();
