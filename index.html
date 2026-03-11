@@ -520,8 +520,6 @@
     let currentLanguage = 'en';
     let currentAudio = null;
    
-let audioPlayer = new Audio();
-   
     const audioUrls = {
       en: {
         'moon-facts': 'moon-facts-en.mp3',
@@ -609,7 +607,7 @@ let audioPlayer = new Audio();
       }
     };
 
-    function playAudio(section) {
+ function playAudio(section) {
   const audioFile = audioUrls[currentLanguage]?.[section];
 
   if (!audioFile) {
@@ -617,11 +615,16 @@ let audioPlayer = new Audio();
     return;
   }
 
-  audioPlayer.pause();
-  audioPlayer.currentTime = 0;
-  audioPlayer.src = audioFile;
+  // stop previous audio
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
 
-  audioPlayer.play().catch(err => {
+  // create and play new audio
+  currentAudio = new Audio("./" + audioFile);
+
+  currentAudio.play().catch(err => {
     console.log("Audio blocked:", err);
   });
 }
@@ -711,16 +714,18 @@ let audioPlayer = new Audio();
 function toggleAnswer(card) {
 
   const answerBox = card.querySelector('.answer-box');
-
   if (!answerBox) return;
 
   const isOpening = !answerBox.classList.contains('open');
 
   answerBox.classList.toggle('open');
 
-  // stop any audio
-  audioPlayer.pause();
-  audioPlayer.currentTime = 0;
+  // stop audio
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+    currentAudio = null;
+  }
 
   if (isOpening) {
     const section = card.getAttribute("data-audio");
