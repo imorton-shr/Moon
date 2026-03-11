@@ -519,7 +519,9 @@
     // ===========================
     let currentLanguage = 'en';
     let currentAudio = null;
-
+   
+let audioPlayer = new Audio();
+   
     const audioUrls = {
       en: {
         'moon-facts': 'moon-facts-en.mp3',
@@ -615,18 +617,13 @@
     return;
   }
 
-  if (currentAudio) {
-    currentAudio.pause();
-    currentAudio = null;
-  }
+  audioPlayer.pause();
+  audioPlayer.currentTime = 0;
+  audioPlayer.src = audioFile;
 
-  const audio = new Audio(audioFile);
-
-  audio.play().catch(err => {
-    console.log("Audio blocked or failed:", err);
+  audioPlayer.play().catch(err => {
+    console.log("Audio blocked:", err);
   });
-
-  currentAudio = audio;
 }
     // ===========================
     // TRANSLATION SYSTEM
