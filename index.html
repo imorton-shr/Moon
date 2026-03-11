@@ -707,22 +707,25 @@ let audioPlayer = new Audio();
     // EXPANDABLE ANSWERS
     // ===========================
     
-    // Toggle answer visibility with audio control
-    function toggleAnswer(card) {
-      const answerBox = card.querySelector('.answer-box');
-      if (answerBox) {
-        // Check if opening or closing
-        const isOpening = !answerBox.classList.contains('open');
-        
-        answerBox.classList.toggle('open');
-        
-        if (isOpening) {
-          // Stop main section audio when opening a question
-          if (currentAudio) {
-            currentAudio.pause();
-            currentAudio.currentTime = 0;
-            currentAudio = null;
-          }
+   // Toggle answer visibility with audio control
+function toggleAnswer(card) {
+  const answerBox = card.querySelector('.answer-box');
+
+  if (answerBox) {
+
+    const isOpening = !answerBox.classList.contains('open');
+
+    answerBox.classList.toggle('open');
+
+    if (isOpening) {
+
+      // Stop any audio when opening a question
+      audioPlayer.pause();
+      audioPlayer.currentTime = 0;
+
+    }
+  }
+}
           
           // Get the question ID from the card's position or data attribute
           const questionText = card.querySelector('.text-xl')?.textContent || '';
