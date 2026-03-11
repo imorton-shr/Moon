@@ -615,7 +615,7 @@
     return;
   }
 
-  const audioPath = audioFile;
+  const audioPath = window.location.origin + "/Moon/" + audioFile;
 
   if (currentAudio) {
     currentAudio.pause();
@@ -623,9 +623,8 @@
   }
 
   currentAudio = new Audio(audioPath);
-  currentAudio.play().catch(() => {});
+  currentAudio.play().catch(err => console.log(err));
 }
-
     // ===========================
     // TRANSLATION SYSTEM
     // ===========================
