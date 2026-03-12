@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Moon Explorer for Kids!</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <script src="/_sdk/element_sdk.js"></script>
   <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&amp;family=Noto+Sans+Thai&amp;family=Noto+Sans+SC&amp;family=Noto+Sans+JP&amp;display=swap" rel="stylesheet">
   <style>
     * { font-family: 'Fredoka', 'Noto Sans Thai', 'Noto Sans SC', 'Noto Sans JP', sans-serif; }
@@ -110,7 +109,6 @@
     }
   </style>
   <style>body { box-sizing: border-box; }</style>
-  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full overflow-auto">
   <div id="app-wrapper" class="min-h-full w-full bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 relative">
@@ -177,7 +175,15 @@
         <h3 class="text-xl font-bold text-yellow-200 flex items-center gap-2"><span>🤔</span> <span data-en="Is the Moon soft? 👆" data-th="ดวงจันทร์นุ่มหรือไม่? 👆" data-zh="月球是软的吗? 👆" data-ja="月は柔らかいですか? 👆">Is the Moon soft? <span class="ml-auto text-2xl">👆</span></span></h3>
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="No, the Moon is NOT soft!" data-th="ไม่ ดวงจันทร์ไม่นุ่ม!" data-zh="不,月球不是软的!" data-ja="いいえ、月は柔らかくありません!"><strong class="text-orange-300">No, the Moon is NOT soft!</strong></span> <span data-en="The Moon is made of hard ROCK! 🪨" data-th="ดวงจันทร์ทำจากหินแข็ง! 🪨" data-zh="月球是由坚硬的岩石制成的! 🪨" data-ja="月は硬い岩でできています! 🪨">The Moon is made of hard ROCK! 🪨</span></p>
-         <p class="mt-2 text-lg"><span data-en="But the top layer has lots of soft, powdery dust called \" moon dust\ or \regolith\. its like very fine sand! the astronauts left footprints in this dust! 👣 data-th="แต่ชั้นบนมีฝุ่นละเอียดมากมายเรียกว่า \" ฝุ่นดวงจันทร์\ หรือ \regolith\ มันเหมือนทรายละเอียด นักบินอวกาศทิ้งรอยเท้าไว้ในฝุ่นนี้! data-zh="但顶层有很多柔软的粉状灰尘,称为\" 月球灰尘\或\风化层\。它像非常细的沙子!宇航员在这种灰尘中留下了足迹! data-ja="しかし、上層には「月の粉」または「風化層」と呼ばれる多くの柔らかな粉状の塵があります。それは非常に細い砂のようです!宇宙飛行士はこの塵に足跡を残しました! 👣">But the top layer has lots of soft, powdery dust called <strong class="text-yellow-300">"moon dust"</strong> or "regolith". It's like very fine sand! The astronauts left footprints in this dust! 👣</span></p>
+         <p class="mt-2 text-lg">
+<span 
+data-en="But the top layer has lots of soft, powdery dust called 'moon dust' or 'regolith'. It's like very fine sand! The astronauts left footprints in this dust! 👣"
+data-th="แต่ชั้นบนมีฝุ่นละเอียดมากมายเรียกว่า 'ฝุ่นดวงจันทร์' หรือ 'regolith' มันเหมือนทรายละเอียด นักบินอวกาศทิ้งรอยเท้าไว้ในฝุ่นนี้! 👣"
+data-zh="但顶层有很多柔软的粉状灰尘，称为‘月球灰尘’或‘风化层’。它像非常细的沙子！宇航员在这种灰尘中留下了足迹！👣"
+data-ja="しかし、上層には『月の粉』または『風化層』と呼ばれる柔らかな粉状の塵があります。それはとても細かい砂のようです！宇宙飛行士はこの塵に足跡を残しました！👣">
+But the top layer has lots of soft, powdery dust called <strong class="text-yellow-300">"moon dust"</strong> or "regolith". It's like very fine sand! The astronauts left footprints in this dust! 👣
+</span>
+</p>
         </div>
        </div>
        <div class="question-card bg-gradient-to-r from-purple-600/40 to-indigo-600/40 rounded-2xl p-4 mb-4" onclick="toggleAnswer(this)">
