@@ -113,7 +113,8 @@
   <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
  </head>
  <body class="h-full overflow-auto">
-  <div id="app-wrapper" class="min-h-full w-full bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 relative"><!-- Stars Background -->
+  <div id="app-wrapper" class="min-h-full w-full bg-gradient-to-b from-indigo-950 via-purple-900 to-indigo-950 relative">
+   <!-- Stars Background -->
    <div class="fixed inset-0 pointer-events-none overflow-hidden">
     <div class="star absolute w-2 h-2 bg-white rounded-full top-[5%] left-[10%]" style="animation-delay: 0s;"></div>
     <div class="star absolute w-1 h-1 bg-yellow-200 rounded-full top-[15%] left-[25%]" style="animation-delay: 0.5s;"></div>
@@ -131,10 +132,12 @@
     <div class="star absolute w-1 h-1 bg-white rounded-full top-[85%] left-[65%]" style="animation-delay: 0.4s;"></div>
     <div class="star absolute w-2 h-2 bg-pink-200 rounded-full top-[90%] left-[20%]" style="animation-delay: 1.1s;"></div>
    </div><!-- Main Content -->
-   <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto"><!-- Header with Moon -->
+   <div class="relative z-10 p-4 md:p-8 max-w-4xl mx-auto">
+    <!-- Header with Moon -->
     <header class="text-center mb-8">
      <div class="floating inline-block mb-4">
-      <div class="moon-glow w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-yellow-100 via-yellow-200 to-amber-300 rounded-full mx-auto relative"><!-- Moon craters -->
+      <div class="moon-glow w-32 h-32 md:w-40 md:h-40 bg-gradient-to-br from-yellow-100 via-yellow-200 to-amber-300 rounded-full mx-auto relative">
+       <!-- Moon craters -->
        <div class="absolute w-8 h-8 bg-yellow-300/50 rounded-full top-4 left-6"></div>
        <div class="absolute w-5 h-5 bg-yellow-300/40 rounded-full top-12 right-6"></div>
        <div class="absolute w-6 h-6 bg-yellow-300/30 rounded-full bottom-8 left-10"></div>
@@ -149,11 +152,14 @@
      <h1 id="main-title" class="text-4xl md:text-5xl font-bold text-yellow-300 mb-2 drop-shadow-lg">🚀 Moon Explorer! 🌙</h1>
      <p id="welcome-message" class="text-xl text-purple-200"><span class="wave-hand">👋</span> Hello little space explorer! Let's learn about the Moon!</p>
     </header><!-- Language Selection -->
-    <div class="flex flex-wrap justify-center gap-2 mb-6"><button onclick="setLanguage('en')" class="language-btn active bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-blue-500/50 transition-all" data-lang="en">🇬🇧 English</button> <button onclick="setLanguage('th')" class="language-btn bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-red-500/50 transition-all" data-lang="th">🇹🇭 Thai</button> <button onclick="setLanguage('zh')" class="language-btn bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-yellow-500/50 transition-all" data-lang="zh">🇨🇳 中文</button> <button onclick="setLanguage('ja')" class="language-btn bg-gradient-to-r from-pink-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-pink-500/50 transition-all" data-lang="ja">🇯🇵 日本語</button>
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+     <button onclick="setLanguage('en')" class="language-btn active bg-gradient-to-r from-blue-500 to-blue-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-blue-500/50 transition-all" data-lang="en">🇬🇧 English</button> <button onclick="setLanguage('th')" class="language-btn bg-gradient-to-r from-red-500 to-red-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-red-500/50 transition-all" data-lang="th">🇹🇭 Thai</button> <button onclick="setLanguage('zh')" class="language-btn bg-gradient-to-r from-yellow-500 to-yellow-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-yellow-500/50 transition-all" data-lang="zh">🇨🇳 中文</button> <button onclick="setLanguage('ja')" class="language-btn bg-gradient-to-r from-pink-500 to-pink-600 text-white px-3 py-1 rounded-full text-sm font-semibold shadow-lg hover:shadow-pink-500/50 transition-all" data-lang="ja">🇯🇵 日本語</button>
     </div><!-- Navigation -->
-    <nav class="flex flex-wrap justify-center gap-3 mb-8"><button onclick="showSection('moon-facts')" class="nav-btn bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-yellow-500/50" data-section="moon-facts"> 🌙 <span data-en="Moon Facts" data-th="ข้อมูลเกี่ยวกับดวงจันทร์" data-zh="月球事实" data-ja="月の事実">Moon Facts</span> </button> <button onclick="showSection('astronauts')" class="nav-btn bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-pink-500/50" data-section="astronauts"> 👨‍🚀 <span data-en="Astronauts" data-th="นักบินอวกาศ" data-zh="宇航员" data-ja="宇宙飛行士">Astronauts</span> </button> <button onclick="showSection('rockets')" class="nav-btn bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-orange-500/50" data-section="rockets"> 🚀 <span data-en="Rockets" data-th="จรวด" data-zh="火箭" data-ja="ロケット">Rockets</span> </button> <button onclick="showSection('fun-questions')" class="nav-btn bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-green-500/50" data-section="fun-questions"> ❓ <span data-en="Fun Questions" data-th="คำถามสนุกๆ" data-zh="有趣问题" data-ja="楽しい質問">Fun Questions</span> </button>
+    <nav class="flex flex-wrap justify-center gap-3 mb-8">
+     <button onclick="showSection('moon-facts')" class="nav-btn bg-gradient-to-r from-yellow-500 to-amber-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-yellow-500/50" data-section="moon-facts"> 🌙 <span data-en="Moon Facts" data-th="ข้อมูลเกี่ยวกับดวงจันทร์" data-zh="月球事实" data-ja="月の事実">Moon Facts</span> </button> <button onclick="showSection('astronauts')" class="nav-btn bg-gradient-to-r from-pink-500 to-rose-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-pink-500/50" data-section="astronauts"> 👨‍🚀 <span data-en="Astronauts" data-th="นักบินอวกาศ" data-zh="宇航员" data-ja="宇宙飛行士">Astronauts</span> </button> <button onclick="showSection('rockets')" class="nav-btn bg-gradient-to-r from-orange-500 to-red-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-orange-500/50" data-section="rockets"> 🚀 <span data-en="Rockets" data-th="จรวด" data-zh="火箭" data-ja="ロケット">Rockets</span> </button> <button onclick="showSection('fun-questions')" class="nav-btn bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full font-semibold shadow-lg hover:shadow-green-500/50" data-section="fun-questions"> ❓ <span data-en="Fun Questions" data-th="คำถามสนุกๆ" data-zh="有趣问题" data-ja="楽しい質問">Fun Questions</span> </button>
     </nav><!-- Content Sections -->
-    <main id="content-area"><!-- Moon Facts Section -->
+    <main id="content-area">
+     <!-- Moon Facts Section -->
      <section id="moon-facts" class="space-section">
       <div class="bg-white/10 backdrop-blur-sm rounded-3xl p-6 mb-6 border-2 border-yellow-400/30">
        <h2 class="text-3xl font-bold text-yellow-300 mb-4 flex items-center gap-2"><span class="text-4xl">🌙</span> <span data-en="Amazing Moon Facts!" data-th="ข้อเท็จจริงที่น่าสนใจเกี่ยวกับดวงจันทร์!" data-zh="令人惊叹的月球事实!" data-ja="素晴らしい月の事実!">Amazing Moon Facts!</span></h2>
@@ -275,29 +281,25 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="The first Moon landing was called \" apollo 11\ and happened on july 20-21, 1969! 🎆 data-th="การลงจอดบนดวงจันทร์ครั้งแรกเรียกว่า \" และเกิดขึ้นในวันที่ 20-21 กรกฎาคม 2512! data-zh="首次月球着陆被称为\" 阿波罗11号\，发生在1969年7月20-21日！🎆 data-ja="最初の月面着陸は「アポロ11号」と呼ばれ、1969年7月20-21日に行われました！🎆">The first Moon landing was called <strong class="text-yellow-300">"Apollo 11"</strong> and happened on <strong class="text-pink-300">July 20-21, 1969</strong>! 🎆</span></p>
          <div class="my-4 space-y-3">
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">🚀</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">🚀</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="The Rocket:" data-th="จรวด:" data-zh="火箭:" data-ja="ロケット:">The Rocket:</span></p>
             <p><span data-en="A giant rocket called Saturn V - it was as tall as a 36-story building! HUGE!" data-th="จรวดยักษ์เรียกว่า Saturn V - สูงเท่าตึก 36 ชั้น! ขนาดใหญ่มาก!" data-zh="一个叫做土星五号的巨大火箭 - 它和36层楼一样高！巨大!" data-ja="土星V号と呼ばれる巨大なロケット - それは36階建ての建物と同じくらい背が高かった！巨大!">A giant rocket called <strong class="text-cyan-300">Saturn V</strong> - it was as tall as a 36-story building! HUGE!</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">👨‍🚀</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">👨‍🚀</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="The Crew:" data-th="ลูกเรือ:" data-zh="船员:" data-ja="乗務員:">The Crew:</span></p>
             <p><span data-en="Neil Armstrong and Buzz Aldrin landed on the Moon, while Michael Collins stayed in orbit around the Moon" data-th="นีล อาร์มสตรองและบัซ แอลดริน ลงจอดบนดวงจันทร์ ในขณะที่ไมเคิล คอลลินส์ อยู่ในวงโคจรรอบดวงจันทร์" data-zh="尼尔·阿姆斯特朗和巴兹·奥尔德林登陆月球，迈克尔·柯林斯则在月球周围的轨道上" data-ja="ニール・アームストロングとバズ・オルドリンが月に着陆し、マイケル・コリンズは月の周りの軌道に留まった"><strong class="text-yellow-200">Neil Armstrong</strong> and <strong class="text-yellow-200">Buzz Aldrin</strong> landed on the Moon, while <strong class="text-yellow-200">Michael Collins</strong> stayed in orbit around the Moon</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">🌙</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">🌙</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="The Landing:" data-th="การลงจอด:" data-zh="着陆:" data-ja="着陸:">The Landing:</span></p>
             <p><span data-en="Neil Armstrong flew a special spacecraft called the Lunar Module down to the Moon's surface" data-th="นีล อาร์มสตรองบินเครื่องอวกาศพิเศษเรียกว่า Lunar Module ลงไปยังพื้นผิวดวงจันทร์" data-zh="尼尔·阿姆斯特朗驾驶名为登月舱的特殊航天器降落到月球表面" data-ja="ニール・アームストロングは月着陸船と呼ばれる特別な宇宙船を月面に向けて操縦しました">Neil Armstrong flew a special spacecraft called the <strong class="text-cyan-300">Lunar Module</strong> down to the Moon's surface</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">⏱️</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">⏱️</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="The Timeline:" data-th="ไทม์ไลน์:" data-zh="时间表:" data-ja="タイムライン:">The Timeline:</span></p>
             <p><span data-en="The astronauts spent about 2 hours and 31 minutes walking on the Moon - enough time to collect rocks and take pictures! 📸" data-th="นักบินอวกาศใช้เวลาประมาณ 2 ชั่วโมง 31 นาทีในการเดินบนดวงจันทร์ - เพียงพอเวลาในการเก็บเกี่ยวหินและถ่ายรูป! 📸" data-zh="宇航员在月球上行走了大约2小时31分钟 - 足够的时间收集岩石和拍照！📸" data-ja="宇宙飛行士は月の上を約2時間31分間歩きました-岩石を集めて写真を撮る十分な時間！📸">The astronauts spent about 2 hours and 31 minutes walking on the Moon - enough time to collect rocks and take pictures! 📸</span></p>
@@ -334,18 +336,24 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg mb-3"><span data-en="A rocket is like a super-powerful firework that takes people to space! 🎆" data-th="จรวดเหมือนเพลงไพ่ระเบิดที่ทรงพลังมากที่นำคนไปในอวกาศ! 🎆" data-zh="火箭就像一个超级强大的烟火，把人送到太空！🎆" data-ja="ロケットは人々を宇宙に連れて行く超強力な花火のようなものです！🎆">A rocket is like a super-powerful firework that takes people to space! 🎆</span></p>
          <div class="space-y-3">
-          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3"><span class="text-3xl">1️⃣</span>
-           <div><strong class="text-orange-300"><span data-en="BLAST OFF!" data-th="ระเบิด!" data-zh="升空!" data-ja="打ち上げ!">BLAST OFF!</span></strong>
+          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3">
+           <span class="text-3xl">1️⃣</span>
+           <div>
+            <strong class="text-orange-300"><span data-en="BLAST OFF!" data-th="ระเบิด!" data-zh="升空!" data-ja="打ち上げ!">BLAST OFF!</span></strong>
             <p><span data-en="The rocket burns special fuel that makes HUGE flames shoot out the bottom. This pushes the rocket UP UP UP! 🔥" data-th="จรวดเผาเชื้อเพลิงพิเศษที่ทำให้เปลวไฟขนาดใหญ่ยิงออกมาจากด้านล่าง ซึ่งจะดันจรวดขึ้นไป! 🔥" data-zh="火箭燃烧特殊燃料，产生巨大的火焰从底部射出。这把火箭推上去！🔥" data-ja="ロケットは特別な燃料を燃やし、巨大な炎が底から放出されます。これはロケットを上に押し上げます！🔥">The rocket burns special fuel that makes HUGE flames shoot out the bottom. This pushes the rocket UP UP UP! 🔥</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3"><span class="text-3xl">2️⃣</span>
-           <div><strong class="text-cyan-300"><span data-en="Into Space!" data-th="เข้าสู่อวกาศ!" data-zh="进入太空！" data-ja="宇宙へ！">Into Space!</span></strong>
+          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3">
+           <span class="text-3xl">2️⃣</span>
+           <div>
+            <strong class="text-cyan-300"><span data-en="Into Space!" data-th="เข้าสู่อวกาศ!" data-zh="进入太空！" data-ja="宇宙へ！">Into Space!</span></strong>
             <p><span data-en="The rocket goes SO fast - about 40,000 km per hour! That's faster than anything on Earth! 💨" data-th="จรวดไปอย่างรวดเร็ว - ประมาณ 40,000 กิโลเมตรต่อชั่วโมง! มันเร็วกว่าอะไรก็ตามบนโลก! 💨" data-zh="火箭速度极快 - 大约每小时40,000公里！这比地球上的任何东西都快！💨" data-ja="ロケットは非常に速く移動します - 時速約40,000km！それは地球上のどんなものより速いです！💨">The rocket goes SO fast - about 40,000 km per hour! That's faster than anything on Earth! 💨</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3"><span class="text-3xl">3️⃣</span>
-           <div><strong class="text-yellow-300"><span data-en="To the Moon!" data-th="ไปยังดวงจันทร์!" data-zh="去月球！" data-ja="月へ！">To the Moon!</span></strong>
+          <div class="bg-white/10 rounded-xl p-3 flex items-start gap-3">
+           <span class="text-3xl">3️⃣</span>
+           <div>
+            <strong class="text-yellow-300"><span data-en="To the Moon!" data-th="ไปยังดวงจันทร์!" data-zh="去月球！" data-ja="月へ！">To the Moon!</span></strong>
             <p><span data-en="It takes about 3 DAYS to fly to the Moon! That's like driving in a car for 3 whole days! 🌙" data-th="ใช้เวลาประมาณ 3 วันในการบินไปยังดวงจันทร์! มันเหมือนการขับรถเป็นเวลา 3 วันเต็มๆ! 🌙" data-zh="飞到月球需要大约3天！就像开车3整天一样！🌙" data-ja="月に飛ぶのに約3日かかります！3日間ずっと車を運転しているようなものです！🌙">It takes about <strong>3 DAYS</strong> to fly to the Moon! That's like driving in a car for 3 whole days! 🌙</span></p>
            </div>
           </div>
@@ -372,15 +380,13 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="Rockets use special fuel that burns REALLY hot to create power! 🔥" data-th="จรวดใช้เชื้อเพลิงพิเศษที่ไหม้ร้อนมากเพื่อสร้างพลังงาน! 🔥" data-zh="火箭使用特殊燃料，燃烧非常炽热以产生动力！🔥" data-ja="ロケットは非常に高温で燃焼して電力を生成する特別な燃料を使用しています！🔥">Rockets use <strong class="text-orange-300">special fuel</strong> that burns REALLY hot to create power! 🔥</span></p>
          <div class="my-4 space-y-3">
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">🥛</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">🥛</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Liquid Fuel:" data-th="เชื้อเพลิงเหลว:" data-zh="液体燃料:" data-ja="液体燃料:">Liquid Fuel:</span></p>
             <p><span data-en="Most big rockets use liquid fuel like kerosene or hydrogen. When mixed together, they create HUGE explosions that shoot the rocket into the sky!" data-th="จรวดขนาดใหญ่ส่วนใหญ่ใช้เชื้อเพลิงเหลวเช่นน้ำมันเบนซินหรือไฮโดรเจน เมื่อผสมกัน พวกเขาสร้างการระเบิดขนาดใหญ่ที่ยิงจรวดขึ้นท้องฟ้า!" data-zh="大多数大型火箭使用液体燃料，如煤油或氢气。当混合在一起时，它们会产生巨大的爆炸，将火箭射向天空！" data-ja="ほとんどの大型ロケットはケロシンや水素などの液体燃料を使用します。混ぜると、ロケットを空に発射する巨大な爆発が発生します！">Most big rockets use liquid fuel like kerosene or hydrogen. When mixed together, they create HUGE explosions that shoot the rocket into the sky!</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">💥</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">💥</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Solid Fuel:" data-th="เชื้อเพลิงแข็ง:" data-zh="固体燃料:" data-ja="固体燃料:">Solid Fuel:</span></p>
             <p><span data-en="Some rockets use solid fuel (like powder). It burns really fast and creates thrust!" data-th="จรวดบางลำใช้เชื้อเพลิงแข็ง (เหมือนผง) มันไหม้เร็วมากและสร้างแรงขับ!" data-zh="有些火箭使用固体燃料（如粉末）。它燃烧非常快并产生推力！" data-ja="一部のロケットは固体燃料（粉末のような）を使用します。それは非常に速く燃焼し、推力を生成します！">Some rockets use solid fuel (like powder). It burns really fast and creates thrust!</span></p>
@@ -415,36 +421,31 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="Space travel is an amazing adventure! Here's what happens: 🚀" data-th="การเดินทางในอวกาศเป็นการผจญภัยที่ยอดเยี่ยม! นี่คือสิ่งที่เกิดขึ้น: 🚀" data-zh="太空旅行是一场惊人的冒险！以下是所发生的情况：🚀" data-ja="宇宙旅行は素晴らしい冒険です！以下は何が起こるかです：🚀">Space travel is an amazing adventure! Here's what happens: 🚀</span></p>
          <div class="my-4 space-y-3">
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">1️⃣</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">1️⃣</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Launch:" data-th="ปล่อย:" data-zh="发射:" data-ja="打ち上げ:">Launch:</span></p>
             <p><span data-en="The rocket fills up with fuel and blasts off! WHOOOOSH! You feel pushed DOWN hard (called G-forces) - like being pressed into your seat! 💨" data-th="จรวดเต็มไปด้วยเชื้อเพลิงและระเบิด! วูชช! คุณรู้สึกถูกผลักลงแรง ๆ (เรียกว่า G-forces) - เหมือนถูกกดลงนั่งของคุณ! 💨" data-zh="火箭加满燃料并升空！嗯！你感觉被用力推向下方（称为重力加速度）-就像被压入座位一样！💨" data-ja="ロケットは燃料で満たされて爆発します！ウーシュ！あなたは力強く下に押されていると感じます（G力と呼ばれる）-座席に押し付けられているようなものです！💨">The rocket fills up with fuel and blasts off! WHOOOOSH! You feel pushed DOWN hard (called G-forces) - like being pressed into your seat! 💨</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">2️⃣</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">2️⃣</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Weightlessness:" data-th="ไร้น้ำหนัก:" data-zh="失重:" data-ja="無重力:">Weightlessness:</span></p>
             <p><span data-en="Once in space, astronauts start floating! Everything floats - water, food, the astronauts! They have to strap in to sleep! 🌊" data-th="เมื่อเข้าสู่อวกาศ นักบินอวกาศจะเริ่มลอย! ทุกอย่างลอย - น้ำ อาหาร นักบินอวกาศ! พวกเขาต้องมัดตัวเข้านอน! 🌊" data-zh="一旦进入太空，宇航员就开始漂浮！一切都漂浮 - 水、食物、宇航员！他们必须系好安全带才能睡觉！🌊" data-ja="一旦宇宙に入ると、宇宙飛行士は浮き始めます！すべてが浮遊します-水、食べ物、宇宙飛行士！彼らは眠りにつく必要があります！🌊">Once in space, astronauts start <strong class="text-cyan-300">floating</strong>! Everything floats - water, food, the astronauts! They have to strap in to sleep! 🌊</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">3️⃣</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">3️⃣</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="The Journey:" data-th="การเดินทาง:" data-zh="旅程:" data-ja="旅:">The Journey:</span></p>
             <p><span data-en="To the Moon takes 3 days! During the trip, astronauts sleep, eat special space food, and monitor all the instruments. 🥫😴" data-th="ไปยังดวงจันทร์ใช้เวลา 3 วัน! ระหว่างการเดินทาง นักบินอวกาศนอนหลับ กินอาหารอวกาศพิเศษ และตรวจสอบเครื่องมือทั้งหมด 🥫😴" data-zh="到月球需要3天！在旅途中，宇航员睡眠、吃特殊太空食物并监测所有仪器。🥫😴" data-ja="月までは3日かかります！旅の間、宇宙飛行士は眠り、特別な宇宙食を食べ、すべての機器を監視します。🥫😴">To the Moon takes 3 days! During the trip, astronauts sleep, eat special space food, and monitor all the instruments. 🥫😴</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">4️⃣</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">4️⃣</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Landing:" data-th="การลงจอด:" data-zh="着陆:" data-ja="着陸:">Landing:</span></p>
             <p><span data-en="When landing on the Moon or returning to Earth, it gets HOT! The spacecraft's bottom burns because of friction with the air (like rubbing your hands together really fast!). 🔥" data-th="เมื่อลงจอดบนดวงจันทร์หรือกลับไปที่โลก มันจะร้อนมาก! ส่วนล่างของยานอวกาศไหม้เนื่องจากการเสียดสี (เหมือนการถูมือของคุณเข้าด้วยกันอย่างรวดเร็ว!) 🔥" data-zh="当登陆月球或返回地球时，会变得很热！航天器的底部因与空气的摩擦而燃烧（就像快速地揉搓双手一样！）🔥" data-ja="月に着陸するか地球に戻るとき、暑くなります！航空機の底は空気との摩擦のため燃えています（手を一緒に速くこするようなものです！）🔥">When landing on the Moon or returning to Earth, it gets HOT! The spacecraft's bottom burns because of friction with the air (like rubbing your hands together really fast!). 🔥</span></p>
            </div>
           </div>
-          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3">
-           <span class="text-3xl">5️⃣</span>
+          <div class="bg-white/10 rounded-lg p-3 flex items-start gap-3"><span class="text-3xl">5️⃣</span>
            <div>
             <p class="font-bold text-yellow-300"><span data-en="Splashdown/Landing:" data-th="ประสานงานน้ำ/ลงจอด:" data-zh="溅落/着陆:" data-ja="スプラッシュダウン/着陸:">Splashdown/Landing:</span></p>
             <p><span data-en="Spacecraft either splash down in the ocean 🌊 or land on solid ground. Parachutes slow them down so they don't crash! 🪂" data-th="ยานอวกาศจะประสานงานในมหาสมุทร 🌊 หรือลงจอดบนพื้นแข็ง ร่มชุมพร ช่วยชะลอความเร็วลงเพื่อไม่ให้พวกเขาชนกัน! 🪂" data-zh="航天器要么在海洋中溅落🌊 要么在陆地上着陆。降落伞会减速，这样他们就不会坠毁！🪂" data-ja="航空機は海に落下するか🌊 または陸上に着陸します。パラシュートが速度を落とします！🪂">Spacecraft either splash down in the ocean 🌊 or land on solid ground. Parachutes slow them down so they don't crash! 🪂</span></p>
@@ -463,7 +464,8 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="Scientists haven't found any aliens on the Moon! 🔭" data-th="นักวิทยาศาสตร์ยังไม่พบเอเลี่ยนใด ๆ บนดวงจันทร์! 🔭" data-zh="科学家还没有在月球上发现任何外星人！🔭" data-ja="科学者は月で宇宙人を見つけていません！🔭">Scientists haven't found any aliens on the Moon! 🔭</span></p>
          <p class="mt-2 text-lg"><span data-en="The Moon has no air to breathe, no water, and it gets super hot and super cold. It would be very hard for anything to live there!" data-th="ดวงจันทร์ไม่มีอากาศที่จะหายใจ ไม่มีน้ำ และมันร้อนเหลือเกิน สิ่งต่างๆ จะหนาวเหลือเกิน มันจะยากมากที่จะมีสิ่งมีชีวิตอยู่ที่นั่น!" data-zh="月球没有呼吸的空气，没有水，而且它会变得很热和很冷。很难有东西在那里生活！" data-ja="月には呼吸する空気がなく、水もなく、非常に暑く、非常に寒くなります。そこに何かが生きるのは非常に難しいでしょう！">The Moon has <strong class="text-red-300">no air to breathe</strong>, <strong class="text-blue-300">no water</strong>, and it gets <strong class="text-orange-300">super hot</strong> and <strong class="text-cyan-300">super cold</strong>. It would be very hard for anything to live there!</span></p>
-         <div class="text-center my-4 text-5xl"><span data-en="🌙 + 👽 = ❌" data-th="🌙 + 👽 = ❌" data-zh="🌙 + 👽 = ❌" data-ja="🌙 + 👽 = ❌">🌙 + 👽 = ❌</span>
+         <div class="text-center my-4 text-5xl">
+          <span data-en="🌙 + 👽 = ❌" data-th="🌙 + 👽 = ❌" data-zh="🌙 + 👽 = ❌" data-ja="🌙 + 👽 = ❌">🌙 + 👽 = ❌</span>
          </div>
          <p class="text-lg text-yellow-300"><span data-en="But who knows what we might find in other parts of space! The universe is HUGE! 🌌" data-th="แต่ใครรู้ว่าเราจะพบอะไรในส่วนอื่น ๆ ของอวกาศ! จักรวาลนั้นใหญ่มาก! 🌌" data-zh="但谁知道我们可能在太空的其他地方找到什么！宇宙太庞大了！🌌" data-ja="しかし、誰が宇宙の他の部分で何を見つけるか知っていますか！宇宙は巨大です！🌌">But who knows what we might find in other parts of space! The universe is HUGE! 🌌</span></p>
         </div>
@@ -473,7 +475,8 @@
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="There are THOUSANDS of footprints on the Moon! 👣👣👣" data-th="มีรอยเท้านับพันบนดวงจันทร์! 👣👣👣" data-zh="月球上有数千个脚印！👣👣👣" data-ja="月には数千の足跡があります！👣👣👣">There are <strong class="text-yellow-300">THOUSANDS</strong> of footprints on the Moon! 👣👣👣</span></p>
          <p class="mt-2 text-lg"><span data-en="12 astronauts walked around on the Moon, and each one left LOTS of footprints in the moon dust!" data-th="นักบินอวกาศ 12 คนเดินไปมาบนดวงจันทร์ และแต่ละคนทิ้งรอยเท้าจำนวนมากในฝุ่นดวงจันทร์!" data-zh="12名宇航员在月球上行走，每个人都在月球灰尘中留下了许多足迹！" data-ja="12人の宇宙飛行士が月の周りを歩いて、それぞれが月の塵に多くの足跡を残しました！"><strong class="text-pink-300">12 astronauts</strong> walked around on the Moon, and each one left LOTS of footprints in the moon dust!</span></p>
-         <div class="flex justify-center gap-2 my-4 text-3xl"><span>👣</span><span>👣</span><span>👣</span><span>👣</span><span>👣</span>
+         <div class="flex justify-center gap-2 my-4 text-3xl">
+          <span>👣</span><span>👣</span><span>👣</span><span>👣</span><span>👣</span>
          </div>
          <p class="text-lg text-cyan-300 font-bold"><span data-en="🌟 Amazing Fact: Those footprints are STILL there today! They will last for millions of years because there's no wind or rain to wash them away! 🌟" data-th="🌟 ข้อเท็จจริงที่น่าสนใจ: รอยเท้าเหล่านั้นยังคงอยู่ที่นั่นวันนี้! พวกเขาจะอยู่ได้เป็นล้านปีเพราะไม่มีลมหรือฝนที่จะล้างมันออก! 🌟" data-zh="🌟 有趣的事实：那些足迹今天仍然存在！他们将持续数百万年，因为没有风或雨可以冲走他们！🌟" data-ja="🌟 素晴らしい事実：これらの足跡は今日も残っています！彼らは何百万年も続くでしょう。なぜなら彼らを吹き飛ばす風や雨がないからです！🌟">🌟 Amazing Fact: Those footprints are STILL there today! They will last for millions of years because there's no wind or rain to wash them away! 🌟</span></p>
         </div>
@@ -482,7 +485,8 @@
         <h3 class="text-xl font-bold text-yellow-200 flex items-center gap-2"><span>🧹</span> <span data-en="Does anybody clean the Moon? 👆" data-th="มีใครทำความสะอาดดวงจันทร์หรือไม่? 👆" data-zh="有人清理月球吗? 👆" data-ja="誰が月を掃除しますか? 👆">Does anybody clean the Moon? <span class="ml-auto text-2xl">👆</span></span></h3>
         <div class="answer-box bg-white/10 rounded-xl mt-2 text-white">
          <p class="text-lg"><span data-en="Nope! Nobody cleans the Moon! 🧹❌" data-th="ไม่! ไม่มีใครทำความสะอาดดวงจันทร์! 🧹❌" data-zh="不！没有人清理月球！🧹❌" data-ja="いいえ！誰も月を掃除しません！🧹❌"><strong class="text-pink-300">Nope!</strong> Nobody cleans the Moon! 🧹❌</span></p>
-         <div class="text-center my-4"><span class="text-6xl">🌙</span> <span class="text-4xl">🚫</span> <span class="text-6xl">🧹</span>
+         <div class="text-center my-4">
+          <span class="text-6xl">🌙</span> <span class="text-4xl">🚫</span> <span class="text-6xl">🧹</span>
          </div>
          <p class="mt-2 text-lg"><span data-en="All the stuff astronauts left behind is still there! Including:" data-th="ของทั้งหมดที่นักบินอวกาศทิ้งไว้ยังคงอยู่ที่นั่น! รวม:" data-zh="宇航员留下的所有东西仍然在那里！包括:" data-ja="宇宙飛行士が残した物がすべてそこに残っています！を含む:">All the stuff astronauts left behind is still there! Including:</span></p>
          <ul class="list-none mt-3 space-y-2">
@@ -498,11 +502,13 @@
      </section>
     </main><!-- Fun Footer -->
     <footer class="text-center py-8 border-t border-white/10 mt-8">
-     <div class="floating inline-block mb-4"><span class="text-5xl">🌟</span>
+     <div class="floating inline-block mb-4">
+      <span class="text-5xl">🌟</span>
      </div>
      <p class="text-purple-200 text-lg"><span data-en="Keep looking up at the stars, little explorer! ✨" data-th="มองขึ้นไปที่ดาวต่อไป นักสำรวจตัวน้อย! ✨" data-zh="继续仰望星空，小探险家！✨" data-ja="星を見上げ続けてください、小さな冒険家！✨">Keep looking up at the stars, little explorer! ✨</span></p>
      <p class="text-purple-300 mt-2"><span data-en="Maybe one day YOU will visit the Moon! 🚀🌙" data-th="บางทีวันหนึ่งคุณอาจไปเยี่ยมดวงจันทร์! 🚀🌙" data-zh="也许有一天你会访问月球！🚀🌙" data-ja="いつかあなたが月を訪れるかもしれません！🚀🌙">Maybe one day <strong class="text-yellow-300">YOU</strong> will visit the Moon! 🚀🌙</span></p>
-     <div class="flex justify-center gap-4 mt-4 text-3xl"><span class="floating" style="animation-delay: 0s;">⭐</span> <span class="floating" style="animation-delay: 0.3s;">🌙</span> <span class="floating" style="animation-delay: 0.6s;">🚀</span> <span class="floating" style="animation-delay: 0.9s;">👨‍🚀</span> <span class="floating" style="animation-delay: 1.2s;">🌟</span>
+     <div class="flex justify-center gap-4 mt-4 text-3xl">
+      <span class="floating" style="animation-delay: 0s;">⭐</span> <span class="floating" style="animation-delay: 0.3s;">🌙</span> <span class="floating" style="animation-delay: 0.6s;">🚀</span> <span class="floating" style="animation-delay: 0.9s;">👨‍🚀</span> <span class="floating" style="animation-delay: 1.2s;">🌟</span>
      </div>
     </footer>
    </div>
@@ -517,27 +523,99 @@
     const audioUrls = {
       en: {
         'moon-facts': 'moon-facts-en.mp3',
+        'moon-facts-soft': 'moon-facts-soft-en.mp3',
+        'moon-facts-inside': 'moon-facts-inside-en.mp3',
+        'moon-facts-feel': 'moon-facts-feel-en.mp3',
+        'moon-facts-walk': 'moon-facts-walk-en.mp3',
         'astronauts': 'astronauts-en.mp3',
+        'astronauts-what': 'astronauts-what-en.mp3',
+        'astronauts-suit': 'astronauts-suit-en.mp3',
+        'astronauts-been': 'astronauts-been-en.mp3',
+        'astronauts-neil': 'astronauts-neil-en.mp3',
+        'astronauts-landing': 'astronauts-landing-en.mp3',
+        'astronauts-boy': 'astronauts-boy-en.mp3',
         'rockets': 'rockets-en.mp3',
-        'fun-questions': 'fun-questions-en.mp3'
+        'rockets-how': 'rockets-how-en.mp3',
+        'rockets-iss': 'rockets-iss-en.mp3',
+        'rockets-fuel': 'rockets-fuel-en.mp3',
+        'rockets-gravity': 'rockets-gravity-en.mp3',
+        'rockets-happens': 'rockets-happens-en.mp3',
+        'fun-questions': 'fun-questions-en.mp3',
+        'fun-questions-aliens': 'fun-questions-aliens-en.mp3',
+        'fun-questions-footprints': 'fun-questions-footprints-en.mp3',
+        'fun-questions-clean': 'fun-questions-clean-en.mp3'
       },
       th: {
         'moon-facts': 'moon-facts-th.mp3',
+        'moon-facts-soft': 'moon-facts-soft-th.mp3',
+        'moon-facts-inside': 'moon-facts-inside-th.mp3',
+        'moon-facts-feel': 'moon-facts-feel-th.mp3',
+        'moon-facts-walk': 'moon-facts-walk-th.mp3',
         'astronauts': 'astronauts-th.mp3',
+        'astronauts-what': 'astronauts-what-th.mp3',
+        'astronauts-suit': 'astronauts-suit-th.mp3',
+        'astronauts-been': 'astronauts-been-th.mp3',
+        'astronauts-neil': 'astronauts-neil-th.mp3',
+        'astronauts-landing': 'astronauts-landing-th.mp3',
+        'astronauts-boy': 'astronauts-boy-th.mp3',
         'rockets': 'rockets-th.mp3',
-        'fun-questions': 'fun-questions-th.mp3'
+        'rockets-how': 'rockets-how-th.mp3',
+        'rockets-iss': 'rockets-iss-th.mp3',
+        'rockets-fuel': 'rockets-fuel-th.mp3',
+        'rockets-gravity': 'rockets-gravity-th.mp3',
+        'rockets-happens': 'rockets-happens-th.mp3',
+        'fun-questions': 'fun-questions-th.mp3',
+        'fun-questions-aliens': 'fun-questions-aliens-th.mp3',
+        'fun-questions-footprints': 'fun-questions-footprints-th.mp3',
+        'fun-questions-clean': 'fun-questions-clean-th.mp3'
       },
       zh: {
         'moon-facts': 'moon-facts-zh.mp3',
+        'moon-facts-soft': 'moon-facts-soft-zh.mp3',
+        'moon-facts-inside': 'moon-facts-inside-zh.mp3',
+        'moon-facts-feel': 'moon-facts-feel-zh.mp3',
+        'moon-facts-walk': 'moon-facts-walk-zh.mp3',
         'astronauts': 'astronauts-zh.mp3',
+        'astronauts-what': 'astronauts-what-zh.mp3',
+        'astronauts-suit': 'astronauts-suit-zh.mp3',
+        'astronauts-been': 'astronauts-been-zh.mp3',
+        'astronauts-neil': 'astronauts-neil-zh.mp3',
+        'astronauts-landing': 'astronauts-landing-zh.mp3',
+        'astronauts-boy': 'astronauts-boy-zh.mp3',
         'rockets': 'rockets-zh.mp3',
-        'fun-questions': 'fun-questions-zh.mp3'
+        'rockets-how': 'rockets-how-zh.mp3',
+        'rockets-iss': 'rockets-iss-zh.mp3',
+        'rockets-fuel': 'rockets-fuel-zh.mp3',
+        'rockets-gravity': 'rockets-gravity-zh.mp3',
+        'rockets-happens': 'rockets-happens-zh.mp3',
+        'fun-questions': 'fun-questions-zh.mp3',
+        'fun-questions-aliens': 'fun-questions-aliens-zh.mp3',
+        'fun-questions-footprints': 'fun-questions-footprints-zh.mp3',
+        'fun-questions-clean': 'fun-questions-clean-zh.mp3'
       },
       ja: {
         'moon-facts': 'moon-facts-ja.mp3',
+        'moon-facts-soft': 'moon-facts-soft-ja.mp3',
+        'moon-facts-inside': 'moon-facts-inside-ja.mp3',
+        'moon-facts-feel': 'moon-facts-feel-ja.mp3',
+        'moon-facts-walk': 'moon-facts-walk-ja.mp3',
         'astronauts': 'astronauts-ja.mp3',
+        'astronauts-what': 'astronauts-what-ja.mp3',
+        'astronauts-suit': 'astronauts-suit-ja.mp3',
+        'astronauts-been': 'astronauts-been-ja.mp3',
+        'astronauts-neil': 'astronauts-neil-ja.mp3',
+        'astronauts-landing': 'astronauts-landing-ja.mp3',
+        'astronauts-boy': 'astronauts-boy-ja.mp3',
         'rockets': 'rockets-ja.mp3',
-        'fun-questions': 'fun-questions-ja.mp3'
+        'rockets-how': 'rockets-how-ja.mp3',
+        'rockets-iss': 'rockets-iss-ja.mp3',
+        'rockets-fuel': 'rockets-fuel-ja.mp3',
+        'rockets-gravity': 'rockets-gravity-ja.mp3',
+        'rockets-happens': 'rockets-happens-ja.mp3',
+        'fun-questions': 'fun-questions-ja.mp3',
+        'fun-questions-aliens': 'fun-questions-aliens-ja.mp3',
+        'fun-questions-footprints': 'fun-questions-footprints-ja.mp3',
+        'fun-questions-clean': 'fun-questions-clean-ja.mp3'
       }
     };
 
@@ -644,10 +722,57 @@
     function toggleAnswer(card) {
       const answerBox = card.querySelector('.answer-box');
       if (answerBox) {
+        // Check if opening or closing
+        const isOpening = !answerBox.classList.contains('open');
+        
         answerBox.classList.toggle('open');
         
-        // Stop audio when closing
-        if (answerBox.classList.contains('open')) {
+        if (isOpening) {
+          // Stop main section audio when opening a question
+          if (currentAudio) {
+            currentAudio.pause();
+            currentAudio.currentTime = 0;
+            currentAudio = null;
+          }
+          
+          // Get the question ID from the card's position or data attribute
+          const questionText = card.querySelector('.text-xl')?.textContent || '';
+          
+          // Determine which audio to play based on the question
+          let audioId = null;
+          
+          // Moon Facts questions
+          if (questionText.includes('soft')) audioId = 'moon-facts-soft';
+          else if (questionText.includes('inside')) audioId = 'moon-facts-inside';
+          else if (questionText.includes('feel')) audioId = 'moon-facts-feel';
+          else if (questionText.includes('walk')) audioId = 'moon-facts-walk';
+          
+          // Astronauts questions
+          else if (questionText.includes('What is an Astronaut')) audioId = 'astronauts-what';
+          else if (questionText.includes('Spacesuit')) audioId = 'astronauts-suit';
+          else if (questionText.includes('been on')) audioId = 'astronauts-been';
+          else if (questionText.includes('Neil Armstrong')) audioId = 'astronauts-neil';
+          else if (questionText.includes('First Moon Landing')) audioId = 'astronauts-landing';
+          else if (questionText.includes('boy go')) audioId = 'astronauts-boy';
+          
+          // Rockets questions
+          else if (questionText.includes('rocket get')) audioId = 'rockets-how';
+          else if (questionText.includes('ISS')) audioId = 'rockets-iss';
+          else if (questionText.includes('fuel')) audioId = 'rockets-fuel';
+          else if (questionText.includes('Gravity')) audioId = 'rockets-gravity';
+          else if (questionText.includes('happens during')) audioId = 'rockets-happens';
+          
+          // Fun Questions
+          else if (questionText.includes('aliens')) audioId = 'fun-questions-aliens';
+          else if (questionText.includes('footprints')) audioId = 'fun-questions-footprints';
+          else if (questionText.includes('clean')) audioId = 'fun-questions-clean';
+          
+          // Play audio if found
+          if (audioId) {
+            playAudio(audioId);
+          }
+        } else {
+          // Stop audio when closing
           if (currentAudio) {
             currentAudio.pause();
             currentAudio.currentTime = 0;
@@ -697,5 +822,5 @@
     // Initialize - show moon facts section by default
     showSection('moon-facts');
   </script>
- <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9da8df1b944eb251',t:'MTc3MzIxNDQxMi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9da8e697073da667',t:'MTc3MzIxNDcxOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
